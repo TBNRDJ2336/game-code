@@ -1,0 +1,15 @@
+{
+  "name": "muzan-archive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unofficial, original WebGL fan archive for Muzan Kibutsuji.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js",
+    "c:build": "gcc -O2 -o archive_engine archive_engine.c"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
