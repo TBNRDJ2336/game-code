@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Native companion build outputs
+archive_engine
+archive_engine.exe
+*.o
+*.obj
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Operating system / editor
+.DS_Store
+Thumbs.db
+.vscode/
