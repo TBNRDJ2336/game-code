@@ -1,11 +1,42 @@
 # Muzan Archive
 
-An unofficial, fan-made WebGL character archive for Muzan Kibutsuji.
+An unofficial, fan-made, high-fidelity WebGL character archive for Muzan Kibutsuji.
 
-- Original procedural WebGL visual: no official artwork is bundled.
-- Responsive, high-density presentation with an interactive fidelity toggle.
-- Published through GitHub Pages.
+> **Fan project notice:** Demon Slayer: Kimetsu no Yaiba and its characters belong to their respective rights holders. This repository contains original procedural visuals only; no official art is bundled.
 
-## Local development
+## Live site
 
-Open `index.html` directly in a modern browser. The companion `server.js` and `archive_engine.c` remain in the local project for the JavaScript/C backend experiment; GitHub Pages hosts the static frontend.
+GitHub Pages deployment is configured at:
+
+`https://tbnrdj2336.github.io/game-code/`
+
+## Project structure
+
+- `index.html`, `styles.css`, `app.js` — responsive static frontend and original offline WebGL scene
+- `server.js` — dependency-free local JavaScript API/static server
+- `archive_engine.c` — optional C companion service
+- `.github/workflows/deploy-pages.yml` — GitHub Pages deployment workflow
+
+## Development
+
+Requires Node.js 18 or newer.
+
+```bash
+npm run check
+npm start
+```
+
+Open `http://localhost:4173` after starting the local server.
+
+### Optional C companion
+
+```bash
+gcc -O2 -o archive_engine archive_engine.c
+./archive_engine stats
+```
+
+On Windows, compile to `archive_engine.exe`. The JavaScript server detects the executable automatically.
+
+## GitHub Pages
+
+The workflow deploys the static frontend. Ensure the repository's **Settings → Pages → Source** is set to **GitHub Actions**.
