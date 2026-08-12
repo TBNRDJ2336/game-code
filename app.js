@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1 seconds
-Output:
 /* MUZAN ARCHIVE Â· self-contained WebGL character mutation scene */
 (() => {
   const forms = [...document.querySelectorAll('.form-card')];
